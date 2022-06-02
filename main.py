@@ -6,15 +6,15 @@ import requests
 import smtplib
 import os
 
-EMAIL = os.environ.get('email', 'jappreet.016@gmail.com')
-PASSWORD = os.environ.get('password', 'Jappreet@16')
+EMAIL = os.environ.get('email')
+PASSWORD = os.environ.get('password')
 
 app = Flask(__name__)
 app.secret_key = 'DEMO_SWIFT'
 
 
 ##CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db.sqlite3"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL",  "sqlite:///blog.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 login_manager = LoginManager()
@@ -145,7 +145,7 @@ def login():
 def select():
     # API KEY AND PARAMETERS OF API
     if request.method == 'POST' and "api_form" in request.form:
-        API_KEY = 'b076427393b244fea9e5cc9ac3f3935a'
+        API_KEY = os.environ.get('API')
         country = request.form["country"]
         category = request.form["category"]
         return redirect(url_for('api_comment', API_KEY=API_KEY, country=country, category=category))
