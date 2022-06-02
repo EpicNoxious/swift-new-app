@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift ~ News Web App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" />
+  </head>
+  <body class="light-theme">
+    <header class="header">
+      <img src="../static/img/logo.png" alt="Website Logo" class="header__img" />
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__list-item">
+            <a href="{{ url_for('home') }}" class="header__link">Home</a>
+          </li>
+          <li class="header__list-item">
+            <a href="{{ url_for('signup') }}" class="header__link">Sign Up</a>
+          </li>
+
+          <li class="header__list-item">
+            <a href="{{ url_for('home') }}" class="header__link">Contact Us</a>
+          </li>
+          <li class="header__list-item">
+            <a href="#" class="header__link-icon"
+              ><ion-icon
+                name="sunny-outline"
+                class="header__icon sunny"
+              ></ion-icon>
+              <ion-icon
+                name="moon-outline"
+                class="header__icon moon hidden"
+              ></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="sign_up">
+        <div class="sign_up__text-box">
+          <h1 class="heading__primary heading__primary--sign_up">Login</h1>
+          <p class="sign_up__para">
+            Welcome Back ! Please fill the details below
+          </p>
+          <div class="flash-message">
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              <ul class=flashes>
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+              </ul>
+            {% endif %}
+          {% endwith %}
+          </div>
+        </div>
+        <div class="sign_up__signup-box">
+          <form class="sign_up__form" method="post" name="sign_in_form">
+            <div class="sign_up__form--field">
+              <label class="sign_up__form--label">Email address</label>
+              <input
+                type="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                placeholder="Eg: abcd123@gmail.com"
+                name="email_id"
+                class="sign_up__form--input"
+                required
+                oninvalid="setCustomValidity('Please enter a valid email with valid domain Eg:abcd123@gmail.com')"
+              />
+            </div>
+            <div class="sign_up__form--field">
+              <label class="sign_up__form--label">Password</label>
+              <input
+                type="password"
+                placeholder="Eg: Jappy@16*2(002)"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*?[!@#$%^&*+`~=?\|<>/]).{8,}"
+                name="password"
+                class="sign_up__form--input"
+                required
+                oninvalid="alert('Please enter a good combination of Alphabets, Numbers and Special Characters. Eg: Jappy@16*2(002)')"
+              />
+            </div>
+
+            <button class="sign_up__button" type="submit" name="sign_in_form">Login</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="../static/js/script.js"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+</html>

@@ -1,0 +1,67 @@
+.heading__primary {
+  font-family: var(--font-cardo);
+  font-size: 9.6rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: $color-primary;
+  animation: slideInLeft 0.5s ease-out;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s;
+
+  &--sign_up {
+    font-size: 8rem;
+    display: inline-block;
+    &:hover {
+      border-bottom: 1px solid $color-primary;
+    }
+
+    &::first-letter {
+      color: $color-primary;
+      font-weight: 700;
+    }
+  }
+
+  &--news {
+    font-size: 8rem;
+    color: #edf1ed;
+  }
+}
+.heading__secondary {
+  font-size: 5rem;
+  letter-spacing: 1px;
+  color: var(--heading_secondary_color);
+  margin-top: -0.5rem;
+  animation: slideInRight 0.5s ease-out;
+}
+
+.heading__tertiary {
+  display: inline-block;
+  font-size: 4.4rem;
+  color: var(--text_color);
+  font-weight: 100;
+  letter-spacing: 1px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s;
+
+  &:hover {
+    border-bottom: 1px solid var(--text_color);
+  }
+
+  &::first-letter {
+    color: $color-primary;
+    font-weight: 700;
+  }
+
+  &--footer {
+    color: #edf1ed;
+
+    &::first-letter {
+      color: currentColor;
+    }
+
+    &:hover {
+      border-bottom-color: #edf1ed;
+    }
+  }
+}

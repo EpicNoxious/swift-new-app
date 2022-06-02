@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift ~ News Web App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/style.css') }}"
+    />
+  </head>
+  <body class="light-theme">
+    <header class="header">
+      <img
+        src="../static/img/logo.png"
+        alt="Website Logo"
+        class="header__img"
+      />
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__list-item">
+            <a href="#" class="header__link">Home</a>
+          </li>
+          <li class="header__list-item">
+            <a href="#benefits" class="header__link">Benefits</a>
+          </li>
+          <li class="header__list-item">
+            <a href="#categories" class="header__link">Categories</a>
+          </li>
+          <li class="header__list-item">
+            <a href="#contact" class="header__link">Contact Us</a>
+          </li>
+          <li class="header__list-item">
+            <a href="#sign" class="header__link">Sign Up</a>
+          </li>
+          <li class="header__list-item">
+            <a href="#" class="header__link-icon"
+              ><ion-icon
+                name="sunny-outline"
+                class="header__icon sunny"
+              ></ion-icon>
+              <ion-icon
+                name="moon-outline"
+                class="header__icon moon hidden"
+              ></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__text-box">
+          <h1 class="heading__primary">Swift</h1>
+          <h2 class="heading__secondary">Your personal news web app</h2>
+          <p class="hero__text-box--para margin-bottom-sm">
+            Got no time ? we got you . By using swift one can easily access true
+            and quality news in matter of seconds , built with a mordern and
+            simple to operate interface one can easily use it . Dont believe us
+            ? Give it a try
+          </p>
+          <a href="#" class="btn hero__btn">Get started</a>
+        </div>
+        <div class="hero__img-box">
+          <img
+            src="../static/img/hero-img.svg"
+            alt="Intro img"
+            class="hero__img"
+          />
+        </div>
+      </section>
+      <section class="benefits" id="benefits">
+        <div class="container">
+          <div class="benefits__text-box">
+            <h3 class="heading__tertiary">Benefits of using our app</h3>
+            <span
+              ><ion-icon name="cube-outline" class="benefits__icon"></ion-icon
+            ></span>
+          </div>
+          <div class="benefits__main-box">
+            <p class="benefits__para--1 hidden__para">
+              Modern Interface <br />
+              <span>
+                Our app provides an interface which is clean , simple yet
+                elegant maintaing the professionalism.</span
+              >
+            </p>
+            <p class="benefits__para--2 hidden__para">
+              Fast API<br />
+              <span>
+                On our server-side we use a swift API that provides the news
+                based on our country in categories in just a matter of seconds
+              </span>
+            </p>
+            <p class="benefits__para--3 hidden__para">
+              Categories<br />
+              <span>
+                We allow the user to categorize the news in 5 broad categories
+                namely local, global , tech , celebrity and sports for an best
+                readibilty
+              </span>
+            </p>
+            <p class="benefits__para--4 hidden__para">
+              Comment<br />
+              <span>
+                We also allow user to comment on each post and write their views
+                , comments are also monterized by admins to take care of any
+                false and hateful comments
+              </span>
+            </p>
+            <p class="benefits__para--5 hidden__para">
+              Easy to use<br />
+              <span>
+                Are you a aspiring child , or are you a middle aged man , or are
+                you a senior citizen , our app is built on the very basis of
+                simplicity ,so no matter who the user is they can easily login
+                and use our app.</span
+              >
+            </p>
+            <p class="benefits__main-box--text--1">Click Here</p>
+            <img
+              src="../static/img/arrow.png"
+              alt="Image of an arrow"
+              class="benefits__main-box--img"
+            />
+            <p class="benefits__main-box--text--2">Benefits</p>
+            <ul class="benefits__list hidden_benefits">
+              <li class="benefits__link">
+                <div class="benefits__background">&nbsp;</div>
+                <a href="#/" class="benefits__text benefits--text--1"
+                  ><span
+                    ><ion-icon
+                      name="sparkles-outline"
+                      class="benefits__text--icon"
+                    ></ion-icon
+                  ></span>
+                </a>
+              </li>
+              <li class="benefits__link">
+                <a href="#/" class="benefits__text benefits--text--2"
+                  ><span
+                    ><ion-icon
+                      name="speedometer-outline"
+                      class="benefits__text--icon"
+                    ></ion-icon
+                  ></span>
+                </a>
+              </li>
+              <li class="benefits__link">
+                <a href="#/" class="benefits__text benefits--text--3"
+                  ><span
+                    ><ion-icon
+                      name="newspaper-outline"
+                      class="benefits__text--icon"
+                    ></ion-icon
+                  ></span>
+                </a>
+              </li>
+              <li class="benefits__link">
+                <a href="#/" class="benefits__text benefits--text--4"
+                  ><span
+                    ><ion-icon
+                      name="file-tray-full-outline"
+                      class="benefits__text--icon"
+                    ></ion-icon
+                  ></span>
+                </a>
+              </li>
+              <li class="benefits__link">
+                <a href="#/" class="benefits__text benefits--text--5"
+                  ><span
+                    ><ion-icon
+                      name="shapes-outline"
+                      class="benefits__text--icon"
+                    ></ion-icon
+                  ></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="categories" id="categories">
+        <div class="benefits__text-box">
+          <h3 class="heading__tertiary">
+            News Categories available in our app
+          </h3>
+          <span
+            ><ion-icon name="apps-outline" class="benefits__icon"></ion-icon
+          ></span>
+        </div>
+        <div class="features">
+          <div class="features-components">
+            <ion-icon
+              class="features-icon features-icon--local"
+              name="newspaper-outline"
+            ></ion-icon>
+            <p class="features-title">Local News</p>
+            <p class="features-text">
+              Latest local news from the regions you select
+            </p>
+          </div>
+          <div class="features-components">
+            <ion-icon
+              class="features-icon features-icon--business"
+              name="people-outline"
+            ></ion-icon>
+            <p class="features-title">Business News</p>
+            <p class="features-text">
+              Latest business news from the marketing industry
+            </p>
+          </div>
+          <div class="features-components">
+            <ion-icon
+              class="features-icon features-icon--sports"
+              name="medal-outline"
+            ></ion-icon>
+            <p class="features-title">Sports News</p>
+            <p class="features-text">
+              Latest sports news from the world of sports
+            </p>
+          </div>
+          <div class="features-components">
+            <ion-icon
+              class="features-icon features-icon--tech"
+              name="bar-chart-outline"
+            ></ion-icon>
+            <p class="features-title">Tech News</p>
+            <p class="features-text">
+              Latest Tech news from the Technical world
+            </p>
+          </div>
+          <div class="features-components">
+            <ion-icon
+              class="features-icon features-icon--celebrity"
+              name="star-outline"
+            ></ion-icon>
+            <p class="features-title">Celebrity News</p>
+            <p class="features-text">
+              Latest hot news from the Entertainment industry
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="contact_us" id="contact">
+        <div class="benefits__text-box">
+          <h3 class="heading__tertiary">Contact Us!</h3>
+          <span
+            ><ion-icon
+              name="chatbox-ellipses-outline"
+              class="benefits__icon"
+            ></ion-icon
+          ></span>
+        </div>
+        <div class="grid grid--2-cols">
+          <div class="contact-img">
+            <img class="contact-us--img" src="../static/img/email.svg" />
+          </div>
+
+          <div class="contact_form">
+            <form class="form" name="contact_form" method="post">
+              <input
+                type="text"
+                class="form__input"
+                id="fname"
+                name="fname"
+                placeholder="First Name"
+              />
+              <input
+                type="text"
+                class="form__input"
+                id="lname"
+                name="lname"
+                placeholder="Last Name"
+              />
+              <input
+                type="email"
+                class="form__input"
+                id="email"
+                name="email"
+                placeholder="Email Address"
+              />
+              <input
+                type="phone number"
+                class="form__input"
+                id="contact_number"
+                name="contact_number"
+                placeholder="Contact Number"
+              />
+              <div class="flash-message">
+                {% with messages = get_flashed_messages() %} {% if messages %}
+                <ul class="flashes">
+                  {% for message in messages %}
+                  <li>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+                {% endif %} {% endwith %}
+              </div>
+              <button class="sign_up__button" type="submit" name="contact_form">
+                Contact Now
+              </button>
+            </form>
+          </div>
+        </div>
+        <!--        <div class="contact_form__btn">-->
+        <!--          <a href="" class="btn">Contact Now</a>-->
+        <!--        </div>-->
+      </section>
+      <section class="sign_up_now" id="sign">
+        <div class="benefits__text-box">
+          <h3 class="heading__tertiary">Are you ready</h3>
+          <span
+            ><ion-icon name="cafe-outline" class="benefits__icon"></ion-icon
+          ></span>
+        </div>
+        <div class="sign_up_now__main-box">
+          <img
+            src="../static/img/sign_up_arrow.png"
+            alt="Arrow pointing to sign up button"
+            class="sign_up_now__main-box--img"
+          />
+          <form action="{{ url_for('signup') }}" method="post">
+            <button
+              class="ttt sign_up_now__button"
+              type="submit"
+              name="index_form"
+            >
+              Sign Up Now
+            </button>
+          </form>
+          <!--          <a href="../static/sign_up_login.html" class="sign_up_now__main-box&#45;&#45;btn">Sign Up Now</a>-->
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="benefits__text-box">
+        <h3 class="heading__tertiary heading__tertiary--footer">About Us</h3>
+      </div>
+      <div class="footer__text-box">
+        <p class="footer__text-box--text">
+          We are a group of college students willing to help people get quality
+          news from the best source in the least time keeping the user interface
+          as simple as a slime while being loaded with tons of powerful features
+        </p>
+        <p class="footer__text-box--text">
+          We are proficient and updated with the latest evolving technologies in
+          the web development field.
+        </p>
+        <div class="footer__icon-box">
+          <ion-icon
+            name="logo-html5"
+            class="footer__icon-box--icon footer__icon-box--icon--1"
+          ></ion-icon>
+          <ion-icon
+            name="logo-sass"
+            class="footer__icon-box--icon footer__icon-box--icon--2"
+          ></ion-icon>
+          <ion-icon
+            name="logo-javascript"
+            class="footer__icon-box--icon footer__icon-box--icon--3"
+          ></ion-icon>
+          <ion-icon
+            name="logo-npm"
+            class="footer__icon-box--icon footer__icon-box--icon--4"
+          ></ion-icon>
+          <ion-icon
+            name="logo-python"
+            class="footer__icon-box--icon footer__icon-box--icon--5"
+          ></ion-icon>
+        </div>
+        <div class="footer__final">
+          <img
+            src="../static/img/logo-white.png"
+            alt="White logo of the app"
+            class="footer__final--img"
+          />
+          <p class="footer__text-box--text footer__final--text">
+            &copy; Swift Dev Team 2022
+          </p>
+          <img
+            src="../static/img/logo-white.png"
+            alt="White logo of the app"
+            class="footer__final--img"
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="../static/js/script.js"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+</html>

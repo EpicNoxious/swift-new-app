@@ -1,0 +1,40 @@
+.sign_up_now {
+  &__main-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 9.6rem;
+    &--img {
+      height: 50vh;
+      margin-top: -8rem;
+    }
+
+    &--btn {
+      &:link,
+      &:visited {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 5.2rem;
+        font-weight: 100;
+        letter-spacing: 0.75px;
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary,
+          $color-primary-2
+        );
+        padding: 1.2rem 2rem;
+        color: #edf1ed;
+        border-radius: 11px;
+        border-bottom-left-radius: 0px;
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+        transition: all 500ms;
+      }
+      &:hover {
+        transform: translateY(-2rem) scale(1.05);
+      }
+      &:active {
+        transform: translateY(5px);
+      }
+    }
+  }
+}

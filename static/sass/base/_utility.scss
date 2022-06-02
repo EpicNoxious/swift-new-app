@@ -1,0 +1,41 @@
+.margin-bottom-sm {
+  margin-bottom: 2rem;
+}
+.margin-bottom-md {
+  margin-bottom: 4rem;
+}
+.margin-bottom-lg {
+  margin-bottom: 6rem;
+}
+.margin-bottom-xl {
+  margin-bottom: 8rem;
+}
+.hidden {
+  opacity: 0;
+  transform: rotate(360deg);
+}
+.hidden_benefits {
+  opacity: 0;
+  transform: scale(0);
+}
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.background__scaleup {
+  transform: scale(70) !important;
+  z-index: 100;
+}
+
+.hidden__para {
+  display: none !important;
+}
+
+.hide_overflow {
+  overflow: hidden;
+}
+
+.imp_benefit_link {
+  z-index: 1000;
+}

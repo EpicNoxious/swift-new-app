@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift ~ News Web App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" />
+  </head>
+  <body class="light-theme">
+    <header class="header">
+      <img src="{{ url_for('static',filename='img/logo.png') }}" alt="Website Logo" class="header__img" />
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__list-item">
+            <a href="{{ url_for('home') }}" class="header__link">Home</a>
+          </li>
+          <li class="header__list-item">
+            <a href="{{ url_for('select') }}" class="header__link">Categories</a>
+          </li>
+
+          <li class="header__list-item">
+            <a href="#" class="header__link-icon"
+              ><ion-icon
+                name="sunny-outline"
+                class="header__icon sunny"
+              ></ion-icon>
+              <ion-icon
+                name="moon-outline"
+                class="header__icon moon hidden"
+              ></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="news">
+        <div class="news__header">
+          <h1 class="heading__primary heading__primary--news">Swift</h1>
+        </div>
+        <div class="news__categories">
+          <p style="text-align:center;text-transform:capitalize" class="news__categories--item news__categories--item__active">
+            {{category}}
+<!--          </p>-->
+<!--          <p class="news__categories&#45;&#45;item">Business</p>-->
+<!--          <p class="news__categories&#45;&#45;item">Sports</p>-->
+<!--          <p class="news__categories&#45;&#45;item">Tech</p>-->
+<!--          <p class="news__categories&#45;&#45;item">Celebrity</p>-->
+        </div>
+      </section>
+
+      <section class="news__blocks">
+        {% for data in articles_data %}
+        <article class="news__block">
+          <p class="news__block--heading">{{ data['description'] }}</p>
+          <p>
+            <a href="{{ data['url'] }}" class="news__block--read_more">Read More here</a>
+          </p>
+        </article>
+        {% endfor %}
+      </section>
+
+
+      <div class="comment-section" style="magrin:96px;">
+      <div class="comment-form">
+        <form class="form" method="post" name="comment_form">
+              <textarea rows = "5" cols = "20" style="height: 20rem; width: 100rem; margin: 0 auto 4.8rem auto; display: block" placeholder="Write our Comment here..." name="comment">
+              </textarea>
+          <div class="comment-button">
+            <button type="submit" class="sign_up__button" name="comment_form">Comment</button>
+          </div>
+        </form>
+      </div>
+        <div class="comments" style="margin-top:64px;margin-left:24px;font-size:1.8rem;line-height:1.5;">
+          {% for comment in all_comments %}
+          <ul class="user-comment">
+            <li>{{ comment.email_id }}: <span class="user-comments">{{ comment.message }}</span></li>
+          </ul>
+          {% endfor %}
+        </div>
+      </div>
+
+
+    </main>
+  </body>
+  <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+</html>

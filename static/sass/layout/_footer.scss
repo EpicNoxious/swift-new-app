@@ -1,0 +1,67 @@
+.footer {
+  background-color: $color-primary;
+  padding: 8rem;
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    &--text {
+      font-size: 2.4rem;
+      line-height: 1.6;
+      width: 70vw;
+      text-align: center;
+      color: #edf1ed;
+    }
+  }
+  &__icon-box {
+    display: flex;
+    gap: 3.2rem;
+    &--icon {
+      width: 5rem;
+      height: 5rem;
+      color: #edf1ed;
+      transition: all 0.5s;
+      &:hover {
+        transform: scale(1.2) translateY(-2px);
+      }
+
+      &--1 {
+        &:hover {
+          color: #f06529;
+        }
+      }
+      &--2 {
+        &:hover {
+          color: #cd6799;
+        }
+      }
+      &--3 {
+        &:hover {
+          color: yellow;
+        }
+      }
+      &--4 {
+        &:hover {
+          color: #cc3534;
+        }
+      }
+      &--5 {
+        &:hover {
+          color: #edf1ed;
+        }
+      }
+    }
+  }
+
+  &__final {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &--img {
+      height: 10vh;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+// Global Resets
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //1rem =10px
+
+  @media only screen and (max-width: 1400px) {
+    font-size: 56.25%;
+  }
+}
+
+body {
+  font-family: var(--font-roboto);
+  line-height: 1;
+  box-sizing: border-box;
+  transition: all 1s;
+}
+
+body.light-theme {
+  background-color: var(--background);
+}
+
+body.dark-theme {
+  background-color: var(--background);
+}
