@@ -18,7 +18,8 @@ uri = os.getenv("DATABASE_URL")
 if uri and uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
     app.config['SQLALCHEMY_DATABASE_URI'] = uri
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -38,7 +39,7 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     fname = db.Column(db.String(100))
     lname = db.Column(db.String(100))
-    contact = db.Column(db.BigInteger, unique=True)
+    contact = db.Column(db.String(12), unique=True)
     address = db.Column(db.String(200))
     email = db.Column(db.String(200), unique=True)
     password = db.Column(db.String(100))
