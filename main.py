@@ -38,7 +38,7 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     fname = db.Column(db.String(100))
     lname = db.Column(db.String(100))
-    contact = db.Column(db.Integer, unique=True)
+    contact = db.Column(db.BigInteger, unique=True)
     address = db.Column(db.String(200))
     email = db.Column(db.String(200), unique=True)
     password = db.Column(db.String(100))
